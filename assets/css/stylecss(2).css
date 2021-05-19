@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Ruluko');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Segoe Print');
+@import url('https://fonts.googleapis.com/css?family=Lucida Sans');
+@import url('https://fonts.googleapis.com/css?family=Rockwell');
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+h2#fontStyleBappeda {
+	font-family: 'Segoe Print';
+}
+h2#fontStyleAgenda {
+	font-family: 'Lucida Sans';
+    font-weight: 900;
+	color: #8c0106;
+}
+h4#fontJudulKegiatan{
+	text-transform: uppercase;
+	font-weight: bold;
+}
+h4#fontPenanggungJawab{
+	font-size: 20px;
+}
+div.konten {
+	background-color: #f23a3a;
+}
+div.jamsekarang {
+	background-color: #f3d93a;
+}
+#watch {
+	font-family: 'Ruluko', sans-serif;
+	color: rgb(255, 229, 209);
+	font-size: 3vw;
+	-webkit-text-stroke: 3px rgb(85, 85, 85);
+}
+
+div#cardAgenda {
+	background-color: #ef595a;
+	padding: 20px;
+	border: 2px solid black;
+	border-radius: 8%;
+	box-shadow: 8px 8px 5px rgb(82, 82, 82);
+	margin-right: auto;
+	margin-left:  auto;
+}
+li#daftarAgenda {
+	background-color: #ef595a;
+}
+div#kontenAgendaKegiatan {
+	background-color: #fddedb;
+	padding: 30px;
+	padding-bottom: 80px;
+}
+div#infokehadiran {
+	background-color: #f23a3a;
+}

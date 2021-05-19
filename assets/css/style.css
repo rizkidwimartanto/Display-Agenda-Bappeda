@@ -1,0 +1,15 @@
+div#konten{
+    background-color: #f7ea00;
+}
+h4#h4Konten{
+    margin-top: 30px;
+}
+tr#trHead{
+    background-color: #9ede73;
+}
+button#buttonHead{
+    background-color: #9ede73;
+}
+thead, tbody, th,  tr, td{
+    border: 2px solid black;
+}

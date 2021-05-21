@@ -16,4 +16,13 @@ class ControllersDisplayAgenda extends CI_Controller {
 		$this->load->view('index', $data);
 		$this->load->view('headerfooter/footer.php');
 	}
+
+	public function IdAwal()
+	{
+		$data['DataAgenda'] = $this->ModelDisplayAgenda->TampilIdAwal();
+		$data['judul'] = "Agenda Bappeda";
+		$this->load->view('headerfooter/header.php', $data);
+		$this->load->view('index', $data);
+		$this->load->view('headerfooter/footer.php');
+	}
 }

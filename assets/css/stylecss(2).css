@@ -38,7 +38,7 @@ div.jamsekarang {
 
 div#cardAgenda {
 	background-color: #ef595a;
-	padding: 20px;
+	padding: 6.5px;
 	border: 2px solid black;
 	border-radius: 8%;
 	box-shadow: 8px 8px 5px rgb(82, 82, 82);
@@ -51,8 +51,21 @@ li#daftarAgenda {
 div#kontenAgendaKegiatan {
 	background-color: #fddedb;
 	padding: 30px;
-	padding-bottom: 80px;
+	padding-bottom: 70px;
 }
 div#infokehadiran {
 	background-color: #f23a3a;
+	padding-bottom: 4px;
+}
+
+/* Membuat Carousel */
+.swiper-container {
+	width: 500px;
+	height: auto;
+}
+/* Akhir */
+
+h2#SekarangBesok{
+	text-shadow: 3px 3px 3px rgb(82, 82, 82);
+	color: #cc0007;
 }

@@ -1,3 +1,30 @@
+<?php
+function tgl_indo($tanggal)
+{
+    $bulan = array(
+        1 =>   'Januari',
+        'Februari',
+        'Maret',
+        'April',
+        'Mei',
+        'Juni',
+        'Juli',
+        'Agustus',
+        'September',
+        'Oktober',
+        'November',
+        'Desember'
+    );
+    $pecahkan = explode('-', $tanggal);
+
+    // variabel pecahkan 0 = tanggal
+    // variabel pecahkan 1 = bulan
+    // variabel pecahkan 2 = tahun
+
+    return $pecahkan[2] . ' ' . $bulan[(int)$pecahkan[1]] . ' ' . $pecahkan[0];
+}
+?>
+
 <div id="kontenAgendaKegiatan">
     <div class="d-flex justify-content-center" id="instansibappeda">
         <img src="<?php echo base_url(); ?>assets/img/agenda.png" alt="gambar tidak muncul" width="80" height="80">
@@ -18,7 +45,7 @@
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <?php foreach ($DataAgenda as $data) : ?>
-                        <?php if ($data['tanggal_acara'] == date("Y-m-d")) : ?>
+                        <?php if ($data['tanggal_acara'] == tgl_indo(date("Y-m-d"))) : ?>
                             <div class="swiper-slide" data-swiper-autoplay="10000">
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item" id="daftarAgenda">
@@ -38,7 +65,7 @@
                                     </li>
                                     <li class="list-group-item" id="daftarAgenda">
                                         <h4 id="fontPenanggungJawab">
-                                            <?php echo $data['penanggung_jawab']; ?>
+                                            PENANGGUNG JAWAB : <?php echo $data['penanggung_jawab']; ?>
                                         </h4>
                                     </li>
                                     <li class="list-group-item " id="daftarAgenda">
@@ -48,6 +75,10 @@
                             </div>
                         <?php endif; ?>
                     <?php endforeach; ?>
+
+                    <?php if ($data['tanggal_acara'] != tgl_indo(date("Y-m-d"))) : ?>
+                        <h2 id="h2AgendaKosong">Agenda Kosong</h2>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -59,7 +90,7 @@
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <?php foreach ($DataAgenda as $data) : ?>
-                        <?php if ($data['tanggal_acara'] == date("Y-m-d", strtotime('tomorrow'))) : ?>
+                        <?php if ($data['tanggal_acara'] == tgl_indo(date("Y-m-d", strtotime('tomorrow')))) : ?>
                             <div class="swiper-slide" data-swiper-autoplay="8000">
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item" id="daftarAgenda">
@@ -79,7 +110,7 @@
                                     </li>
                                     <li class="list-group-item" id="daftarAgenda">
                                         <h4 id="fontPenanggungJawab">
-                                            <?php echo $data['penanggung_jawab']; ?>
+                                            PENANGGUNG JAWAB : <?php echo $data['penanggung_jawab']; ?>
                                         </h4>
                                     </li>
                                     <li class="list-group-item " id="daftarAgenda">
@@ -89,6 +120,10 @@
                             </div>
                         <?php endif; ?>
                     <?php endforeach; ?>
+
+                    <?php if ($data['tanggal_acara'] != tgl_indo(date("Y-m-d", strtotime('tomorrow')))) : ?>
+                        <h2 id="h2AgendaKosong">Agenda Kosong</h2>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

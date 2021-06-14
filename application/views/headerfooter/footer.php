@@ -4,10 +4,18 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
-            <?php foreach ($DataAgenda as $data) : ?>
-                <div class="swiper-slide" data-swiper-autoplay="10000">
-                    <h4 class="mt-3 text-center font-weight-bold text-light" style="font-size: 30px;"><?php echo $data['kehadiran']; ?></h4>
-                </div>
+            <?php foreach ($DataKehadiran as $data) : ?>
+                <?php if ($data['tanggal'] == tgl_indo(date("Y-m-d"))) : ?>
+                    <div class="swiper-slide" data-swiper-autoplay="8000">
+                        <h4 class="mt-3 text-center font-weight-bold text-light" style="font-size: 30px;"><?php echo $data['kepala']; ?></h4>
+                    </div>
+                    <div class="swiper-slide" data-swiper-autoplay="8000">
+                        <h4 class="mt-3 text-center font-weight-bold text-light" style="font-size: 30px;"><?php echo $data['sekretariat']; ?></h4>
+                    </div>
+                    <div class="swiper-slide" data-swiper-autoplay="8000">
+                        <h4 class="mt-3 text-center font-weight-bold text-light" style="font-size: 30px;"><?php echo $data['kepala_bidang_ekonomi']; ?></h4>
+                    </div>
+                <?php endif; ?>
             <?php endforeach; ?>
         </div>
     </div>

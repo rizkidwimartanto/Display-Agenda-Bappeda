@@ -91,7 +91,7 @@ function tgl_indo($tanggal)
                     <!-- Slides -->
                     <?php foreach ($DataAgenda as $data) : ?>
                         <?php if ($data['tanggal_acara'] == tgl_indo(date("Y-m-d", strtotime('tomorrow')))) : ?>
-                            <div class="swiper-slide" data-swiper-autoplay="8000">
+                            <div class="swiper-slide" data-swiper-autoplay="12000">
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item" id="daftarAgenda">
                                         <div class="d-flex justify-content-between">

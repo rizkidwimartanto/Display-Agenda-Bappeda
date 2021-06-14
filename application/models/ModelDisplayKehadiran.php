@@ -1,9 +1,9 @@
 <?php
-class ModelDisplayAgenda extends CI_Model
+class ModelDisplayKehadiran extends CI_Model
 {
-    public function TampilDataAgenda()
+    public function TampilDataKehadiran()
     {
-        return $this->db->get('adminagendakegiatan')->result_array();
+        return $this->db->get('kehadirankerja')->result_array();
     }
 
     // public function TampilDataBerdasarkanTanggal($tanggal)
